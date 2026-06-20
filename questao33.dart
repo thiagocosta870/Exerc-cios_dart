@@ -11,10 +11,10 @@ class Restaurant {
 
   int ratingsLength() => _ratings.length;
 
-  double averageRating(){
+  double averageRating() {
     double sum = 0;
     for (double rating in _ratings) {
-       sum= sum + rating;
+      sum = sum + rating;
     }
     return sum / ratingsLength();
   }
@@ -26,9 +26,12 @@ class Restaurant {
   List<double> getRatings() => _ratings;
 }
 
-
 void main() {
-  Restaurant restaurant = Restaurant(name: 'Toca do pastel', cuisine: 'Pastelaria', ratings: [4,1,0,5,3.5,0,2,3,2.2,5],);
+  Restaurant restaurant = Restaurant(
+    name: 'Toca do pastel',
+    cuisine: 'Pastelaria',
+    ratings: [4, 1, 0, 5, 3.5, 0, 2, 3, 2.2, 5],
+  );
 
   print(restaurant.ratingsLength());
   print(restaurant.averageRating());
